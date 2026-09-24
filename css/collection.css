@@ -1,0 +1,146 @@
+/* ==========================================================================
+   CHANEL — DIGITAL CONCEPT
+   Collection & Lookbook Styling (Section 40)
+   ========================================================================== */
+
+.collection-hero {
+    position: relative;
+    padding-top: calc(var(--space-8) + 40px);
+    padding-bottom: var(--space-8);
+    background-color: var(--black);
+    text-align: center;
+}
+
+.collection-hero h1 {
+    font-size: var(--type-section);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-cinematic);
+}
+
+.collection-hero p {
+    font-family: var(--font-serif-subtle);
+    font-style: italic;
+    font-size: var(--type-editorial);
+    color: var(--cream);
+    max-width: 600px;
+    margin: var(--space-3) auto 0;
+}
+
+/* Lookbook Chapters */
+.lookbook-chapter {
+    position: relative;
+    padding: var(--space-9) 0;
+    border-top: 1px solid var(--line-dark);
+}
+
+.chapter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--space-6);
+}
+
+.chapter-number {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.chapter-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    text-transform: uppercase;
+}
+
+/* Lookbook Layout A: Fullscreen Bleed */
+.lookbook-bleed-spread {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    min-height: 520px;
+    overflow: hidden;
+    background-color: var(--soft-black);
+    margin-bottom: var(--space-7);
+}
+
+.lookbook-bleed-spread img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.92) contrast(1.1);
+    transition: transform 1.6s var(--ease-out-expo);
+}
+
+.lookbook-bleed-spread:hover img {
+    transform: scale(1.025);
+}
+
+/* Lookbook Layout B: Asymmetric Editorial Pair */
+.lookbook-pair-spread {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(3rem, 6vw, 7rem);
+    align-items: center;
+    margin-bottom: var(--space-7);
+}
+
+.lookbook-pair-spread.reversed {
+    direction: rtl;
+}
+
+.lookbook-pair-spread.reversed > * {
+    direction: ltr;
+}
+
+.lookbook-image-primary {
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    background-color: var(--soft-black);
+}
+
+.lookbook-image-primary img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.4s var(--ease-out-expo);
+}
+
+.lookbook-editorial-text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-4);
+}
+
+.lookbook-editorial-text-wrap h3 {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    text-transform: uppercase;
+}
+
+.lookbook-editorial-text-wrap p {
+    font-size: var(--type-body);
+    color: var(--grey);
+    line-height: 1.8;
+}
+
+/* Lookbook Layout C: Vertical Minimalist Accent */
+.lookbook-vertical-spread {
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: var(--space-6);
+    align-items: flex-end;
+}
+
+.lookbook-vertical-media {
+    position: relative;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background-color: var(--soft-black);
+}
+
+.lookbook-vertical-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

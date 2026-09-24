@@ -1,0 +1,426 @@
+/* ==========================================================================
+   CHANEL — DIGITAL CONCEPT
+   Global Styles, Art Direction, 12-Column Editorial Grid & Texture
+   (Sections 04, 10–13, 15, 16, 20–22, 25)
+   ========================================================================== */
+
+/* Film Grain Overlay with Tactile Depth (Section 22 & 44) */
+.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: var(--z-grain);
+    opacity: 0.024;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+}
+
+/* Page Transition Curtain (Section 18 & 45) */
+.page-curtain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--black);
+    z-index: var(--z-curtain);
+    pointer-events: none;
+    transform: translateY(100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+}
+
+.page-curtain .curtain-logo {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    letter-spacing: var(--tracking-cinematic);
+    color: var(--warm-white);
+    opacity: 0;
+}
+
+.page-curtain .curtain-sub {
+    font-family: var(--font-sans);
+    font-size: var(--type-nano);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--beige);
+    opacity: 0;
+}
+
+/* Custom Precision Cursor (Section 19) */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    background-color: var(--warm-white);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: var(--z-cursor);
+    transform: translate(-50%, -50%);
+    transition: width 0.32s var(--ease-out-power3), 
+                height 0.32s var(--ease-out-power3), 
+                background-color 0.25s ease, 
+                border 0.25s ease,
+                opacity 0.25s ease;
+    mix-blend-mode: difference;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-sans);
+    font-size: 8.5px;
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--black);
+    white-space: nowrap;
+}
+
+.custom-cursor.is-expanded {
+    width: 76px;
+    height: 76px;
+    background-color: var(--white);
+    color: var(--black);
+    mix-blend-mode: normal;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.custom-cursor.is-dark {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.custom-cursor .cursor-text {
+    opacity: 0;
+    transform: translateY(2px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.custom-cursor.is-expanded .cursor-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typography Foundations */
+h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: var(--tracking-tight);
+}
+
+.font-editorial {
+    font-family: var(--font-serif-subtle);
+    font-style: italic;
+    font-weight: 300;
+}
+
+.font-sans {
+    font-family: var(--font-sans);
+}
+
+/* Micro-Typography Labels (Section 25) */
+.micro-label {
+    font-family: var(--font-sans);
+    font-size: var(--type-micro);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--grey);
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.micro-label::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--gold-muted);
+}
+
+.mono-tag {
+    font-family: var(--font-sans);
+    font-size: var(--type-nano);
+    letter-spacing: var(--tracking-cinematic);
+    text-transform: uppercase;
+    color: var(--beige);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 3px 9px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.editorial-numeral {
+    font-family: var(--font-serif);
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    color: rgba(255, 255, 255, 0.18);
+    line-height: 0.8;
+}
+
+/* 12-Column High-End Editorial Grid System (Section 23) */
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: clamp(1rem, 2.5vw, 2.5rem);
+    row-gap: var(--space-5);
+    width: 100%;
+}
+
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+/* Structural Containers */
+.container {
+    width: 100%;
+    max-width: 1720px;
+    margin: 0 auto;
+    padding-left: clamp(1.5rem, 4vw, 4rem);
+    padding-right: clamp(1.5rem, 4vw, 4rem);
+}
+
+.container-fluid {
+    width: 100%;
+    padding-left: clamp(1rem, 3vw, 3rem);
+    padding-right: clamp(1rem, 3vw, 3rem);
+}
+
+.container-narrow {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-left: clamp(1.5rem, 4vw, 3rem);
+    padding-right: clamp(1.5rem, 4vw, 3rem);
+}
+
+/* Emotional Pacing: Light / Dark Transitions (Section 21) */
+.section {
+    position: relative;
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-8);
+}
+
+.section-black {
+    background-color: var(--black);
+    color: var(--warm-white);
+}
+
+.section-obsidian {
+    background-color: var(--deep-obsidian);
+    color: var(--warm-white);
+}
+
+.section-cream-sanctuary {
+    background-color: var(--cream);
+    color: var(--black);
+}
+
+.section-cream-sanctuary .micro-label {
+    color: var(--charcoal);
+}
+
+.section-cream-sanctuary .mono-tag {
+    border-color: rgba(0, 0, 0, 0.2);
+    color: var(--charcoal);
+}
+
+.section-warm-white {
+    background-color: var(--warm-white);
+    color: var(--black);
+}
+
+/* Subtle Line Dividers */
+.line-divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--line-dark);
+    margin: var(--space-5) 0;
+}
+
+.section-cream-sanctuary .line-divider {
+    background-color: var(--line-light);
+}
+
+/* Magnetic Buttons & Interactive Elements (Section 15) */
+.btn-magnetic {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    will-change: transform;
+}
+
+.btn-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: 0.95rem 2.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 40px;
+    font-family: var(--font-sans);
+    font-size: var(--type-micro);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--warm-white);
+    background: transparent;
+    transition: all 0.4s var(--ease-out-power3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-pill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--warm-white);
+    transform: translateY(102%);
+    transition: transform 0.4s var(--ease-out-power3);
+    z-index: 0;
+}
+
+.btn-pill span {
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s ease;
+}
+
+.btn-pill:hover::before {
+    transform: translateY(0);
+}
+
+.btn-pill:hover span {
+    color: var(--black);
+}
+
+.btn-pill-dark {
+    border-color: var(--black);
+    color: var(--black);
+}
+
+.btn-pill-dark::before {
+    background-color: var(--black);
+}
+
+.btn-pill-dark:hover span {
+    color: var(--warm-white);
+}
+
+.btn-editorial {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-sans);
+    font-size: var(--type-micro);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--warm-white);
+    padding: var(--space-1) 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.btn-editorial::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease-out-power3);
+}
+
+.btn-editorial:hover::after {
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+/* Dual-Image Hover Crossfade (Section 16) */
+.dual-image-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--soft-black);
+}
+
+.dual-image-wrap img.primary-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s var(--ease-out-expo), opacity 0.7s var(--ease-out-power3);
+    will-change: transform, opacity;
+    z-index: 1;
+}
+
+.dual-image-wrap img.secondary-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.08);
+    transition: transform 1.2s var(--ease-out-expo), opacity 0.7s var(--ease-out-power3);
+    will-change: transform, opacity;
+    z-index: 2;
+}
+
+.dual-image-wrap:hover img.primary-img {
+    opacity: 0;
+    transform: scale(1.04);
+}
+
+.dual-image-wrap:hover img.secondary-img {
+    opacity: 1;
+    transform: scale(1.00);
+}
+
+/* Overlapping Typographic Depth Helpers (Sections 04 & 12) */
+.layer-bg-type {
+    position: absolute;
+    font-family: var(--font-serif);
+    font-size: var(--type-display-giant);
+    letter-spacing: var(--tracking-tight);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.038);
+    pointer-events: none;
+    z-index: var(--z-background);
+    user-select: none;
+    line-height: 0.8;
+}
+
+.overlap-image-top {
+    position: relative;
+    z-index: var(--z-midground);
+}

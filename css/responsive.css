@@ -1,0 +1,286 @@
+/* ==========================================================================
+   CHANEL — DIGITAL CONCEPT
+   Responsive Art Direction & Accessibility (Sections 28, 48, 49)
+   ========================================================================== */
+
+/* Tablet & Smaller Desktops */
+@media (max-width: 1024px) {
+    .grid-12 .editorial-lead-col {
+        grid-column: span 12;
+        padding-right: 0;
+    }
+
+    .grid-12 .editorial-media-col {
+        grid-column: span 12;
+    }
+
+    .editorial-spread-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+    }
+
+    .editorial-text-col {
+        order: 1;
+    }
+
+    .editorial-media-col {
+        order: 2;
+    }
+
+    .product-focus-large {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .product-duet-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .product-card-editorial.offset-down {
+        margin-top: 0;
+    }
+
+    .monochrome-triptych,
+    .craft-grid-triptych {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .monochrome-triptych-item:last-child,
+    .craft-cell:last-child {
+        display: none;
+    }
+
+    .silence-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+    }
+
+    .fragrance-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+    }
+
+    .jewelry-editorial-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+    }
+
+    .product-detail-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+    }
+
+    .product-gallery-container {
+        position: relative;
+        top: 0;
+    }
+
+    .footer-nav-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-5);
+    }
+
+    .related-pieces-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lookbook-pair-spread {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .lookbook-vertical-spread {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Devices (Under 768px) */
+@media (max-width: 768px) {
+    :root {
+        --space-6: 3rem;
+        --space-7: 4rem;
+        --space-8: 5rem;
+        --space-9: 6rem;
+    }
+
+    /* Disable custom cursor completely on touch devices (Section 19 & 48) */
+    .custom-cursor {
+        display: none !important;
+    }
+
+    body {
+        cursor: auto !important;
+    }
+
+    /* Header styling */
+    .site-header {
+        padding: var(--space-3) var(--space-3);
+    }
+
+    .brand-title {
+        font-size: 0.95rem;
+        letter-spacing: var(--tracking-wider);
+    }
+
+    .brand-title span.concept-sub {
+        display: none;
+    }
+
+    /* Hero */
+    .hero-section {
+        min-height: 100svh;
+        padding: calc(var(--space-6) + 20px) var(--space-3) var(--space-4);
+    }
+
+    .hero-title-primary {
+        font-size: clamp(3.2rem, 15vw, 5.5rem);
+    }
+
+    .hero-title-secondary {
+        font-size: 1.8rem;
+    }
+
+    .hero-actions-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+    }
+
+    /* Fullscreen menu */
+    .menu-content-wrapper {
+        padding-left: var(--space-4);
+        padding-right: var(--space-4);
+    }
+
+    .menu-preview-backdrop {
+        display: none;
+    }
+
+    .menu-category-link {
+        font-size: clamp(1.8rem, 8vw, 2.6rem);
+    }
+
+    /* Scroll transformation on mobile (Clean vertical fallback) */
+    .scroll-transformation-section {
+        height: auto;
+        padding: var(--space-7) 0;
+    }
+
+    .transformation-sticky-viewport {
+        position: relative;
+        height: auto;
+        flex-direction: column;
+        gap: var(--space-4);
+        padding: 0 var(--space-3);
+    }
+
+    .transformation-canvas-box {
+        width: 100%;
+        height: 52vh;
+    }
+
+    .transformation-floating-text {
+        position: relative;
+        padding-top: var(--space-3);
+    }
+
+    /* Asymmetric products & grids */
+    .monochrome-triptych,
+    .craft-grid-triptych {
+        grid-template-columns: 1fr;
+    }
+
+    .monochrome-triptych-item:last-child,
+    .craft-cell:last-child {
+        display: block;
+    }
+
+    /* Horizontal scroll mobile adjustments */
+    .horizontal-sticky-viewport {
+        height: auto;
+        min-height: auto;
+        padding: var(--space-6) 0;
+    }
+
+    .horizontal-bg-typography {
+        font-size: clamp(5rem, 18vw, 9rem);
+    }
+
+    .horizontal-track {
+        flex-direction: column;
+        gap: var(--space-5);
+        padding: 0 var(--space-3);
+        transform: none !important;
+    }
+
+    .horizontal-intro-card,
+    .horizontal-card {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    /* Cart drawer */
+    .cart-drawer {
+        max-width: 100%;
+    }
+
+    /* Footer */
+    .footer-nav-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+    }
+
+    .footer-bottom-bar {
+        flex-direction: column;
+        gap: var(--space-2);
+        text-align: center;
+    }
+
+    .related-pieces-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Three.js mobile height */
+    .threejs-sculpture-section {
+        min-height: 55vh;
+    }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY: PREFERS-REDUCED-MOTION (Section 49)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .custom-cursor {
+        display: none !important;
+    }
+
+    .cinematic-intro {
+        display: none !important;
+    }
+
+    .page-curtain {
+        display: none !important;
+    }
+
+    .marquee-track {
+        animation: none !important;
+    }
+
+    .img-reveal-wrapper img,
+    .hero-media,
+    .editorial-media-frame img,
+    .monochrome-triptych-item img {
+        transform: none !important;
+        transition: none !important;
+    }
+}

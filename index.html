@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHANEL — DIGITAL CONCEPT | The Art of Paris</title>
+    <meta name="description" content="An unofficial Parisian luxury fashion digital exhibition and cinematic concept inspired by CHANEL. Precision craftsmanship, editorial minimalism, and haute couture art direction.">
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="CHANEL — DIGITAL CONCEPT">
+    <meta property="og:description" content="Cinematic luxury fashion exhibition concept. Unofficial digital concept.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=85">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Architecture -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/collection.css">
+    <link rel="stylesheet" href="css/product-page.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Tactile Film Grain (Section 22 & 44) -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- Page Curtain Transition (Section 18 & 45) -->
+    <div class="page-curtain" aria-hidden="true">
+        <span class="curtain-logo">CHANEL</span>
+        <span class="curtain-sub">PARIS · DIGITAL CONCEPT</span>
+    </div>
+
+    <!-- Custom Precision Cursor (Section 19) -->
+    <div class="custom-cursor" aria-hidden="true">
+        <span class="cursor-text"></span>
+    </div>
+
+    <!-- ==========================================================================
+         CINEMATIC OPENING TITLE SEQUENCE (Section 03)
+         BLACK -> grain -> CHANEL -> breath -> fragments -> split -> hero
+         ========================================================================== -->
+    <aside class="cinematic-intro" aria-label="Cinematic Experience Intro">
+        <!-- Atmospheric Breathing Glow -->
+        <div class="intro-breath-glow" aria-hidden="true"></div>
+
+        <!-- Multi-Panel Splitting Curtains -->
+        <div class="intro-panel intro-panel-vertical"></div>
+        <div class="intro-panel intro-panel-horizontal"></div>
+
+        <!-- Photographic Fragments (Section 03) -->
+        <div class="intro-fragment-wrap" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=85" alt="Couture Silhouette Fragment" class="intro-fragment intro-fragment-1">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85" alt="Atelier Light Fragment" class="intro-fragment intro-fragment-2">
+        </div>
+        
+        <!-- Centered Typographic Stage -->
+        <div class="intro-brand-stage">
+            <span class="intro-depth-bg-text" aria-hidden="true">PARIS</span>
+            <h1 class="intro-title">CHANEL</h1>
+            <p class="intro-subtitle">DIGITAL CONCEPT · AUTUMN / WINTER</p>
+        </div>
+
+        <button type="button" class="intro-skip-btn btn-magnetic" aria-label="Skip Introduction">
+            SKIP INTRO →
+        </button>
+    </aside>
+
+    <!-- ==========================================================================
+         TOP NAVIGATION BAR (Section 16)
+         ========================================================================== -->
+    <header class="site-header" role="banner">
+        <nav class="nav-container" aria-label="Primary Navigation">
+            <div class="nav-left">
+                <button type="button" class="menu-btn btn-magnetic" aria-label="Open Navigation Menu" data-cursor="OPEN">
+                    <span class="menu-icon-lines" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span>MENU</span>
+                </button>
+            </div>
+
+            <div class="nav-center">
+                <a href="index.html" class="brand-title" data-cursor="CHANEL">
+                    CHANEL <span class="concept-sub">— DIGITAL CONCEPT</span>
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <button type="button" class="nav-link nav-search-btn search-open-trigger btn-magnetic" aria-label="Search Collection" data-cursor="SEARCH">
+                    SEARCH
+                </button>
+                <button type="button" class="nav-link nav-cart-btn cart-open-trigger btn-magnetic" aria-label="Shopping Bag" data-cursor="BAG">
+                    BAG <span class="cart-count-badge">(0)</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==========================================================================
+         FULLSCREEN EDITORIAL MENU (Sections 14, 17, 18)
+         ========================================================================== -->
+    <div class="editorial-menu-overlay" role="dialog" aria-modal="true" aria-label="Main Navigation Menu">
+        <div class="menu-preview-backdrop" aria-hidden="true"></div>
+
+        <div class="menu-overlay-header">
+            <span class="micro-label">PARIS DIGITAL CONCEPT</span>
+            <button type="button" class="menu-close-btn btn-magnetic" aria-label="Close Menu" data-cursor="CLOSE">
+                CLOSE ✕
+            </button>
+        </div>
+
+        <div class="menu-content-wrapper">
+            <ul class="menu-category-list">
+                <li class="menu-category-item" data-category="fashion">
+                    <a href="shop.html?cat=fashion" class="menu-category-link" data-cursor="EXPLORE">FASHION</a>
+                </li>
+                <li class="menu-category-item" data-category="handbags">
+                    <a href="shop.html?cat=handbags" class="menu-category-link" data-cursor="EXPLORE">HANDBAGS</a>
+                </li>
+                <li class="menu-category-item" data-category="shoes">
+                    <a href="shop.html?cat=shoes" class="menu-category-link" data-cursor="EXPLORE">SHOES</a>
+                </li>
+                <li class="menu-category-item" data-category="jewelry">
+                    <a href="shop.html?cat=jewelry" class="menu-category-link" data-cursor="EXPLORE">JEWELRY</a>
+                </li>
+                <li class="menu-category-item" data-category="watches">
+                    <a href="shop.html?cat=watches" class="menu-category-link" data-cursor="EXPLORE">WATCHES</a>
+                </li>
+                <li class="menu-category-item" data-category="beauty">
+                    <a href="shop.html?cat=beauty" class="menu-category-link" data-cursor="EXPLORE">BEAUTY</a>
+                </li>
+                <li class="menu-category-item" data-category="fragrance">
+                    <a href="shop.html?cat=fragrance" class="menu-category-link" data-cursor="EXPLORE">FRAGRANCE</a>
+                </li>
+                <li class="menu-category-item" data-category="couture">
+                    <a href="collection.html" class="menu-category-link" data-cursor="LOOKBOOK">COUTURE</a>
+                </li>
+                <li class="menu-category-item" data-category="house">
+                    <a href="about.html" class="menu-category-link" data-cursor="PARIS">THE HOUSE</a>
+                </li>
+            </ul>
+
+            <div class="menu-footer-links">
+                <a href="shop.html">Full Catalog</a>
+                <a href="collection.html">Lookbook 2026</a>
+                <a href="about.html">Atelier & Heritage</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         SHOPPING BAG DRAWER (Section 37)
+         ========================================================================== -->
+    <div class="cart-drawer-backdrop" aria-hidden="true"></div>
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Bag">
+        <div class="cart-drawer-header">
+            <h3>SHOPPING BAG</h3>
+            <button type="button" class="cart-close-btn btn-magnetic" aria-label="Close Bag" data-cursor="CLOSE">CLOSE ✕</button>
+        </div>
+
+        <div class="cart-items-container">
+            <!-- Dynamically populated via cart.js -->
+        </div>
+
+        <div class="cart-drawer-footer">
+            <div class="cart-subtotal-row">
+                <span>Subtotal (Demo)</span>
+                <span class="cart-subtotal-val">€ 0</span>
+            </div>
+            <button type="button" class="cart-checkout-btn btn-magnetic" data-cursor="CHECKOUT">
+                PROCEED TO CHECKOUT
+            </button>
+            <p class="cart-drawer-disclaimer">UNOFFICIAL DIGITAL CONCEPT · NO COMMERCE</p>
+        </div>
+    </aside>
+
+    <!-- ==========================================================================
+         FULLSCREEN SEARCH MODAL (Section 38)
+         ========================================================================== -->
+    <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search Catalog">
+        <div class="search-modal-header">
+            <span class="micro-label">SEARCH EXHIBITION</span>
+            <button type="button" class="search-modal-close btn-magnetic" aria-label="Close Search" data-cursor="CLOSE">CLOSE ✕</button>
+        </div>
+        <div class="search-modal-body">
+            <div class="search-input-wrapper">
+                <input type="text" class="search-input" placeholder="What are you looking for?" aria-label="Search input">
+            </div>
+            <div class="search-results-wrapper">
+                <div class="search-results-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- ==========================================================================
+             HERO EXPERIENCE WITH DEPTH LAYERS (Sections 04, 05, 13–15)
+             ========================================================================== -->
+        <section class="hero-section" aria-label="Hero Exhibition Campaign">
+            <!-- Background Layered Typography (Section 04) -->
+            <div class="hero-bg-typography-layer" aria-hidden="true">
+                PARIS
+            </div>
+
+            <!-- Foreground Image with Cinematic Settling (Section 05) -->
+            <div class="hero-media-wrapper">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1600&q=85" alt="Parisian Haute Couture Autumn Winter Campaign" class="hero-media">
+            </div>
+            <div class="hero-scrim-top" aria-hidden="true"></div>
+            <div class="hero-scrim-bottom" aria-hidden="true"></div>
+
+            <div class="hero-content">
+                <div class="hero-meta-top">
+                    <span class="hero-concept-notice">DIGITAL CONCEPT · AUTUMN / WINTER</span>
+                    <span class="hero-season">PARIS EDITION · 2026</span>
+                </div>
+
+                <div class="hero-main-title">
+                    <span class="hero-title-primary">CHANEL</span>
+                    <span class="hero-title-secondary">The Art of Paris</span>
+                </div>
+
+                <div class="hero-actions-row">
+                    <div class="hero-cta">
+                        <a href="shop.html" class="btn-pill btn-magnetic" data-cursor="DISCOVER">
+                            <span>DISCOVER THE COLLECTION</span>
+                        </a>
+                    </div>
+                    <div class="hero-scroll-cue">
+                        <span>SCROLL TO ENTER</span>
+                        <div class="scroll-line-anim" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 20: EDITORIAL SPREAD WITH OVERLAPPING DEPTH (12-COL GRID)
+             ========================================================================== -->
+        <section class="section section-black editorial-spread-section" aria-label="The House of Paris Editorial Spread">
+            <!-- Ghost Typography Depth Layer -->
+            <div class="editorial-bg-ghost-text" aria-hidden="true">CAMBON</div>
+
+            <div class="container">
+                <div class="grid-12 editorial-layout-12">
+                    <div class="editorial-lead-col">
+                        <div class="mono-tag">ARCHIVAL STUDY / 01</div>
+                        <h2 class="editorial-spread-title">
+                            <span>THE HOUSE</span>
+                            <span>OF PARIS</span>
+                        </h2>
+                        <p class="editorial-lead-para">
+                            “Elegance is refusal.” The deliberate subtraction of the superfluous in pursuit of pure architectural silhouette.
+                        </p>
+                        <p class="editorial-body-para">
+                            Conceived as an architectural sanctuary of style, this digital concept honors the monochrome tension, rigorous geometry, and artisanal discipline established at 31 Rue Cambon. Silhouettes carved from light and shadow.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <a href="about.html" class="btn-editorial btn-magnetic" data-cursor="READ">
+                                READ THE ARCHIVE ESSAY →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="editorial-media-col">
+                        <div class="editorial-media-frame overlap-image-top" data-cursor="VIEW">
+                            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1400&q=85" alt="Paris Haussmann Architecture and Light" loading="lazy">
+                        </div>
+                        <div class="editorial-caption-floating">
+                            <span>FIG. 01 — ARCHITECTURAL PERSPECTIVE</span>
+                            <span>RUE CAMBON · PARIS 1ER</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             WOW 01: CONTINUOUS MOVING CINEMATIC IMAGE STRIP (Section 24)
+             ========================================================================== -->
+        <section class="moving-strip-section" aria-label="Continuous Atelier Image Strip">
+            <div class="strip-header">
+                <span class="micro-label">MÉTIERS D'ART ARCHIVE</span>
+                <span class="mono-tag">ATELIER MOMENTS · CONTINUOUS</span>
+            </div>
+
+            <div class="marquee-track-wrapper">
+                <div class="marquee-track">
+                    <!-- Set 1 -->
+                    <div class="marquee-item" data-cursor="DISCOVER">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=85" alt="Embroidery Craft" loading="lazy">
+                        <span class="marquee-caption">I. BRODERIE LESAGE</span>
+                    </div>
+                    <div class="marquee-item" data-cursor="DISCOVER">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=85" alt="Tailoring Precision" loading="lazy">
+                        <span class="marquee-caption">II. COUPE ARCHITECTURALE</span>
+                    </div>
+                    <div class="marquee-item" data-cursor="DISCOVER">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=85" alt="Draping Fabric" loading="lazy">
+                        <span class="marquee-caption">III. LE DRAPÉ DE SOIE</span>
+                    </div>
+                    <div class="marquee-item" data-cursor="DISCOVER">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=85" alt="Jewelry Crafting" loading="lazy">
+                        <span class="marquee-caption">IV. HAUTE JOAILLERIE</span>
+                    </div>
+                    <div class="marquee-item" data-cursor="DISCOVER">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=85" alt="Haute Silhouette" loading="lazy">
+                        <span class="marquee-caption">V. SILHOUETTE NOIRE</span>
+                    </div>
+
+                    <!-- Duplicate for seamless infinite loop -->
+                    <div class="marquee-item" data-cursor="DISCOVER">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=85" alt="Embroidery Craft" loading="lazy">
+                        <span class="marquee-caption">I. BRODERIE LESAGE</span>
+                    </div>
+                    <div class="marquee-item" data-cursor="DISCOVER">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=85" alt="Tailoring Precision" loading="lazy">
+                        <span class="marquee-caption">II. COUPE ARCHITECTURALE</span>
+                    </div>
+                    <div class="marquee-item" data-cursor="DISCOVER">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=85" alt="Draping Fabric" loading="lazy">
+                        <span class="marquee-caption">III. LE DRAPÉ DE SOIE</span>
+                    </div>
+                    <div class="marquee-item" data-cursor="DISCOVER">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=85" alt="Jewelry Crafting" loading="lazy">
+                        <span class="marquee-caption">IV. HAUTE JOAILLERIE</span>
+                    </div>
+                    <div class="marquee-item" data-cursor="DISCOVER">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=85" alt="Haute Silhouette" loading="lazy">
+                        <span class="marquee-caption">V. SILHOUETTE NOIRE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             WOW 02: SCROLL-BASED PHYSICAL COMPOSITION TRANSFORMATION (Sections 08 & 26)
+             Small Box -> Expands to 94vw on scroll -> Un-zooms image & reveals text
+             ========================================================================== -->
+        <section class="scroll-transformation-section" aria-label="Compositional Transformation Runway">
+            <div class="transformation-sticky-viewport">
+                <div class="transformation-canvas-box">
+                    <img src="https://images.unsplash.com/photo-1509439581779-6298f75bf6e5?auto=format&fit=crop&w=1800&q=85" alt="Parisian Balcony Transformation" loading="lazy">
+                </div>
+                <div class="transformation-floating-text">
+                    <span class="mono-tag" style="margin-bottom: 1rem;">COMPOSITIONAL MORPH / 02</span>
+                    <h2 class="transformation-title">L’ESPACE PARISIEN</h2>
+                    <p class="transformation-sub">SCROLL TO EXPAND THE VISTA</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             WOW 03: FULLSCREEN PURE TYPOGRAPHY MOMENT (Section 09)
+             Zero UI · Pure Black · Massive Scaled Typography
+             ========================================================================== -->
+        <section class="fullscreen-typography-moment" aria-label="Typographic Silence and Contrast">
+            <span class="pure-typo-primary">CHANEL</span>
+            <span class="pure-typo-secondary">Paris</span>
+            <p class="pure-typo-caption">
+                L’HARMONIE DU SILENCE ET DE LA PRÉCISION
+            </p>
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 20: SILENCE SECTION (LE SILENCE DE RUE CAMBON) (Cream Pacing)
+             ========================================================================== -->
+        <section class="section section-silence" aria-label="Silence Section: Le Silence de Rue Cambon">
+            <div class="container">
+                <div class="silence-grid">
+                    <div class="silence-text-col">
+                        <span class="micro-label">INTERLUDE ARCHITECTURAL</span>
+                        <blockquote class="silence-quote">
+                            “Before you leave the house, look in the mirror and take one thing off.”
+                        </blockquote>
+                        <p class="silence-body">
+                            The essence of restraint. In this warm daylight sanctuary, surfaces speak through texture alone. Unlined bouclé tweed, hand-burnished leather piping, and quiet geometry that honors the natural posture of the wearer.
+                        </p>
+                        <div>
+                            <a href="about.html" class="btn-pill btn-pill-dark btn-magnetic" data-cursor="DISCOVER">
+                                <span>THE MANIFESTO</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="silence-image-wrap" data-cursor="VIEW">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=85" alt="The Mirrored Staircase of Rue Cambon" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECTIONS 22 & 23: OBJECTS OF DESIRE & DUAL-IMAGE HOVER (Section 16)
+             ========================================================================== -->
+        <section class="section objects-exhibition-section" aria-label="Objects of Desire Exhibition">
+            <div class="container">
+                <div class="section-editorial-header">
+                    <div>
+                        <span class="mono-tag">CURATED EXHIBITION / 03</span>
+                        <h2>OBJECTS OF DESIRE</h2>
+                    </div>
+                    <a href="shop.html?cat=handbags" class="btn-editorial btn-magnetic" data-cursor="VIEW ALL">
+                        VIEW HANDBAGS (4) →
+                    </a>
+                </div>
+
+                <div class="asymmetric-product-flow">
+                    <!-- Major Focus 1: Classic Flap Concept -->
+                    <article class="product-focus-large">
+                        <div class="product-focus-media" data-cursor="EXPLORE">
+                            <a href="product.html?id=handbag-01" class="dual-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1400&q=85" alt="Classic Flap Primary Angle" class="primary-img" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1400&q=85" alt="Classic Flap Secondary Angle" class="secondary-img" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="product-focus-details">
+                            <span class="micro-label">NOIR ICON · DIGITAL CONCEPT</span>
+                            <h3 class="product-focus-title">
+                                <a href="product.html?id=handbag-01">Classic Flap — Digital Concept</a>
+                            </h3>
+                            <p class="product-focus-desc">
+                                A study in architectural proportion and timeless geometry. Diamond-quilted grained calfskin, signature metal-interlaced chain, and double-lock clasp.
+                            </p>
+                            <span class="product-price-demo">€ 8,900 · DEMO PRICING</span>
+                            <div style="margin-top: 1rem;">
+                                <a href="product.html?id=handbag-01" class="btn-pill btn-magnetic" data-cursor="VIEW">
+                                    <span>EXPLORE PIECE</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product Duet: Quilted Icon & Paris Mini with Dual-Image Crossfade -->
+                    <div class="product-duet-grid">
+                        <article class="product-card-editorial">
+                            <div class="product-card-image-wrap" data-cursor="VIEW">
+                                <a href="product.html?id=handbag-02" class="dual-image-wrap">
+                                    <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=85" alt="Quilted Icon Concept Primary" class="primary-img" loading="lazy">
+                                    <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1200&q=85" alt="Quilted Icon Concept Alternate" class="secondary-img" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="product-card-meta">
+                                <h3 class="product-card-title"><a href="product.html?id=handbag-02">Quilted Icon — Concept</a></h3>
+                                <span class="product-card-category">€ 9,400 · DEMO</span>
+                            </div>
+                        </article>
+
+                        <article class="product-card-editorial offset-down">
+                            <div class="product-card-image-wrap" data-cursor="VIEW">
+                                <a href="product.html?id=handbag-03" class="dual-image-wrap">
+                                    <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=1200&q=85" alt="Paris Mini Digital Concept Primary" class="primary-img" loading="lazy">
+                                    <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=1200&q=85" alt="Paris Mini Alternate" class="secondary-img" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="product-card-meta">
+                                <h3 class="product-card-title"><a href="product.html?id=handbag-03">Paris Mini — Digital Concept</a></h3>
+                                <span class="product-card-category">€ 5,200 · DEMO</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             WOW 04: SIGNATURE PINNED HORIZONTAL FOOTWEAR RUNWAY (Sections 25 & 26)
+             ========================================================================== -->
+        <section class="horizontal-scroll-container" aria-label="Signature Footwear Runway">
+            <div class="horizontal-sticky-viewport">
+                <!-- Background Parallax Typography (Section 26) -->
+                <div class="horizontal-bg-typography" aria-hidden="true">
+                    PARIS COUTURE
+                </div>
+
+                <div class="horizontal-track">
+                    <!-- Intro Horizontal Card -->
+                    <div class="horizontal-intro-card">
+                        <span class="mono-tag">RUNWAY 04</span>
+                        <h2 class="horizontal-intro-title">THE FOOTWEAR RUNWAY</h2>
+                        <p class="editorial-body-para">
+                            Sculpted balance between posture and motion. From the iconic two-tone slingback to contemporary couture street silhouettes.
+                        </p>
+                    </div>
+
+                    <!-- Footwear Card 1: Signature Heels -->
+                    <div class="horizontal-card">
+                        <a href="product.html?id=shoe-01" class="horizontal-card-media" data-cursor="VIEW">
+                            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1200&q=85" alt="Signature Heels Concept" loading="lazy">
+                        </a>
+                        <div class="horizontal-card-caption">
+                            <span>SIGNATURE HEELS</span>
+                            <span>€ 1,350 · DEMO</span>
+                        </div>
+                    </div>
+
+                    <!-- Footwear Card 2: Parisian Loafers -->
+                    <div class="horizontal-card">
+                        <a href="product.html?id=shoe-02" class="horizontal-card-media" data-cursor="VIEW">
+                            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=1200&q=85" alt="Parisian Loafers Concept" loading="lazy">
+                        </a>
+                        <div class="horizontal-card-caption">
+                            <span>PARISIAN LOAFERS</span>
+                            <span>€ 1,450 · DEMO</span>
+                        </div>
+                    </div>
+
+                    <!-- Footwear Card 3: Evening Shoes -->
+                    <div class="horizontal-card">
+                        <a href="product.html?id=shoe-03" class="horizontal-card-media" data-cursor="VIEW">
+                            <img src="https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&w=1200&q=85" alt="Evening Shoes Concept" loading="lazy">
+                        </a>
+                        <div class="horizontal-card-caption">
+                            <span>EVENING SHOES</span>
+                            <span>€ 1,850 · DEMO</span>
+                        </div>
+                    </div>
+
+                    <!-- Footwear Card 4: Couture Sneakers -->
+                    <div class="horizontal-card">
+                        <a href="product.html?id=shoe-04" class="horizontal-card-media" data-cursor="VIEW">
+                            <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1200&q=85" alt="Couture Sneakers Concept" loading="lazy">
+                        </a>
+                        <div class="horizontal-card-caption">
+                            <span>COUTURE SNEAKERS</span>
+                            <span>€ 1,200 · DEMO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECTIONS 27 & 28: PERFUME & CHIAROSCURO FRAGRANCE SPOTLIGHT
+             ========================================================================== -->
+        <section class="section fragrance-spotlight-section" aria-label="Fragrance Chiaroscuro Experience">
+            <div class="container">
+                <div class="fragrance-grid">
+                    <div class="fragrance-media-wrap" data-cursor="DISCOVER">
+                        <a href="product.html?id=perfume-01">
+                            <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=1400&q=85" alt="N° Noir Extrait de Parfum" loading="lazy">
+                        </a>
+                        <div class="fragrance-glow-accent" aria-hidden="true"></div>
+                    </div>
+
+                    <div class="fragrance-details">
+                        <span class="mono-tag">CHIAROSCURO SCENT / 05</span>
+                        <h2 class="editorial-spread-title">
+                            <span>N° NOIR</span>
+                            <span>EXTRAIT DE PARFUM</span>
+                        </h2>
+                        <p class="editorial-lead-para">
+                            An invisible garment. The sensory architecture of Parisian dusk captured in hand-cut smoky crystal.
+                        </p>
+                        <p class="editorial-body-para">
+                            A departure from classic floral top notes into subterranean tonka, Indonesian patchouli, and nocturnal aldehydes. Sealed with traditional baudruchage wax by the Grasse atelier.
+                        </p>
+
+                        <div class="fragrance-notes-list">
+                            <span class="fragrance-note-item">TOP: ALDEHYDES & BERGAMOT</span>
+                            <span class="fragrance-note-item">HEART: GRASSE JASMINE</span>
+                            <span class="fragrance-note-item">BASE: TONKA & PATCHOULI</span>
+                        </div>
+
+                        <div>
+                            <a href="product.html?id=perfume-01" class="btn-pill btn-magnetic" data-cursor="VIEW">
+                                <span>DISCOVER N° NOIR · € 380</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 29: HIGH JEWELRY & WATCHES EXHIBITION
+             ========================================================================== -->
+        <section class="section jewelry-exhibition-section" aria-label="High Jewelry Exhibition">
+            <div class="container">
+                <div class="section-editorial-header">
+                    <div>
+                        <span class="mono-tag">PLACE VENDÔME / 06</span>
+                        <h2>HAUTE JOAILLERIE</h2>
+                    </div>
+                    <a href="shop.html?cat=jewelry" class="btn-editorial btn-magnetic" data-cursor="VIEW ALL">
+                        DISCOVER JEWELRY →
+                    </a>
+                </div>
+
+                <div class="jewelry-editorial-layout">
+                    <div class="jewelry-featured-frame" data-cursor="VIEW">
+                        <a href="product.html?id=jewelry-01">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1400&q=85" alt="Camélia Diamant Ring Concept" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="editorial-text-col">
+                        <span class="micro-label">PETALS OF LIGHT</span>
+                        <h3 class="product-focus-title">Camélia Diamant Ring — Concept</h3>
+                        <p class="editorial-lead-para">
+                            18K white gold geometry sculpted with 142 brilliant-cut diamonds forming the iconic botanical emblem.
+                        </p>
+                        <p class="editorial-body-para">
+                            Set without visible prongs using historical Place Vendôme micro-pavé techniques, allowing the light to pass unimpeded through each facet.
+                        </p>
+                        <span class="product-price-demo">€ 28,500 · HAUTE CONCEPT</span>
+                        <div>
+                            <a href="product.html?id=jewelry-01" class="btn-pill btn-magnetic" data-cursor="EXPLORE">
+                                <span>VIEW PIECE DETAILS</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             WOW 05: THREE.JS MASTER MOMENT (ABSTRACT SCULPTURE) (Sections 32 & 33)
+             ========================================================================== -->
+        <section class="threejs-sculpture-section" aria-label="Abstract 3D Luxury Installation">
+            <div id="three-canvas-container" aria-hidden="true"></div>
+            <div class="sculpture-overlay-content">
+                <span class="mono-tag">THREE.JS INSTALLATION / 07</span>
+                <h2 class="sculpture-title">L’HARMONIE GÉOMÉTRIQUE</h2>
+                <p class="sculpture-caption">
+                    Interlocking obsidian lacquer and brushed gold ribbons in perpetual slow rotation.
+                </p>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 31: PARIS SEQUENCE (RUE CAMBON)
+             ========================================================================== -->
+        <section class="paris-sequence-section" aria-label="Paris Architectural Sequence">
+            <div class="container-fluid">
+                <div class="paris-sequence-banner" data-cursor="PARIS">
+                    <img src="https://images.unsplash.com/photo-1509439581779-6298f75bf6e5?auto=format&fit=crop&w=1800&q=85" alt="Rue Cambon Balcony and French Architecture" loading="lazy">
+                    <div class="paris-sequence-caption">
+                        <span class="mono-tag">ARCHITECTURAL ESSENCE</span>
+                        <h3>31 RUE CAMBON</h3>
+                        <p>THE EPITOME OF HAUTE COUTURE HERITAGE</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+         FOOTER: THE FINAL FILM FRAME (Sections 19, 42, 43)
+         ========================================================================== -->
+    <footer class="site-footer" role="contentinfo">
+        <!-- Film Closing Vignette (Section 19) -->
+        <div class="footer-film-closing-frame">
+            <span class="footer-film-tag">ÉPILOGUE PARISIEN</span>
+            <p class="footer-film-quote">
+                “In order to be irreplaceable, one must always be different.”
+            </p>
+            <div class="footer-film-frame-media" data-cursor="ARCHIVE">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=85" alt="Paris Twilight Silhouette" loading="lazy">
+            </div>
+        </div>
+
+        <div class="footer-nav-grid">
+            <div class="footer-brand-col">
+                <span class="footer-brand-title">CHANEL</span>
+                <p class="footer-tagline">
+                    An unofficial digital concept celebrating Parisian elegance, typography, and haute couture craftsmanship.
+                </p>
+                <span class="footer-concept-notice">UNOFFICIAL DIGITAL CONCEPT · NO AFFILIATION</span>
+
+                <!-- Sound Control Toggle (Section 43) -->
+                <div>
+                    <button type="button" class="footer-sound-control btn-magnetic" aria-label="Toggle Generative Ambient Sound" data-cursor="AUDIO">
+                        <span class="sound-icon-bars" aria-hidden="true">
+                            <span class="sound-bar"></span>
+                            <span class="sound-bar"></span>
+                            <span class="sound-bar"></span>
+                        </span>
+                        <span class="sound-toggle-label">SOUND OFF</span>
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-col-title">CLIENT SERVICES</h4>
+                <ul class="footer-link-list">
+                    <li><a href="shop.html">Exhibition Catalog</a></li>
+                    <li><a href="about.html">Atelier Appointments</a></li>
+                    <li><a href="collection.html">Lookbook Preview</a></li>
+                    <li><a href="about.html">Delivery & Returns</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-col-title">THE HOUSE</h4>
+                <ul class="footer-link-list">
+                    <li><a href="about.html">The Rue Cambon Story</a></li>
+                    <li><a href="about.html">Métiers d’Art</a></li>
+                    <li><a href="collection.html">Digital Concept</a></li>
+                    <li><a href="about.html">Preservation</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-col-title">FOLLOW</h4>
+                <ul class="footer-link-list">
+                    <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+                    <li><a href="#" target="_blank" rel="noopener">Vimeo Editorial</a></li>
+                    <li><a href="#" target="_blank" rel="noopener">Archive Notes</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Massive Closing Typography (Section 19 & 42) -->
+        <div class="footer-massive-typography" aria-hidden="true">
+            <span class="footer-massive-text">CHANEL</span>
+            <span class="footer-massive-text" style="font-size: clamp(3.5rem, 11vw, 13rem); letter-spacing: var(--tracking-cinematic);">PARIS</span>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <span>© 2026 DIGITAL CONCEPT DEMO · ALL RIGHTS TO RESPECTIVE OWNERS</span>
+            <span>UNOFFICIAL DIGITAL CONCEPT · NOT AN OFFICIAL CHANEL SITE</span>
+            <span>PARIS · HAUTE COUTURE</span>
+        </div>
+    </footer>
+
+    <!-- Vendor Libraries (CDNs) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Project Scripts Architecture (Section 53) -->
+    <script src="js/utilities.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/three-scene.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

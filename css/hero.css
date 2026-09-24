@@ -1,0 +1,348 @@
+/* ==========================================================================
+   CHANEL — DIGITAL CONCEPT
+   Cinematic Title Opening & Hero Experience (Sections 03, 05, 13–15)
+   ========================================================================== */
+
+/* Cinematic Opening Title Sequence (Section 03) */
+.cinematic-intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--black);
+    z-index: var(--z-intro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: all;
+}
+
+/* Atmospheric breathing glow behind typography */
+.intro-breath-glow {
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    max-width: 800px;
+    max-height: 800px;
+    background: radial-gradient(circle, rgba(200, 192, 179, 0.08) 0%, transparent 65%);
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Multi-panel splitting curtains */
+.intro-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-color: var(--black);
+    z-index: 4;
+}
+
+.intro-panel-vertical {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.intro-panel-horizontal {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+/* Editorial photographic fragments (Section 03) */
+.intro-fragment-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.intro-fragment {
+    position: absolute;
+    object-fit: cover;
+    opacity: 0;
+    filter: grayscale(100%) contrast(1.25) brightness(0.85);
+    will-change: transform, opacity, clip-path;
+}
+
+.intro-fragment-1 {
+    top: 15%;
+    left: 10%;
+    width: 38vw;
+    height: 65vh;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: scale(1.15) translateY(20px);
+}
+
+.intro-fragment-2 {
+    bottom: 10%;
+    right: 8%;
+    width: 42vw;
+    height: 60vh;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: scale(1.12) translateY(-20px);
+}
+
+/* Centered Typographic Stage */
+.intro-brand-stage {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    padding: 0 var(--space-4);
+}
+
+.intro-depth-bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-serif);
+    font-size: clamp(8rem, 28vw, 32rem);
+    letter-spacing: var(--tracking-cinematic);
+    color: rgba(255, 255, 255, 0.03);
+    text-transform: uppercase;
+    pointer-events: none;
+    white-space: nowrap;
+    opacity: 0;
+    z-index: 0;
+}
+
+.intro-title {
+    position: relative;
+    font-family: var(--font-serif);
+    font-size: clamp(4.5rem, 15vw, 16rem);
+    letter-spacing: 0.15em;
+    line-height: 0.9;
+    color: var(--warm-white);
+    opacity: 0;
+    transform: translateY(40px) scale(0.94);
+    filter: blur(14px);
+    will-change: transform, opacity, filter, letter-spacing;
+    z-index: 1;
+}
+
+.intro-subtitle {
+    font-family: var(--font-sans);
+    font-size: var(--type-micro);
+    letter-spacing: var(--tracking-cinematic);
+    text-transform: uppercase;
+    color: var(--beige);
+    margin-top: var(--space-4);
+    opacity: 0;
+    transform: translateY(20px);
+    z-index: 1;
+}
+
+.intro-skip-btn {
+    position: absolute;
+    bottom: var(--space-5);
+    right: var(--space-5);
+    z-index: 20;
+    font-family: var(--font-sans);
+    font-size: var(--type-nano);
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    transition: color 0.3s ease;
+    padding: var(--space-2);
+}
+
+.intro-skip-btn:hover {
+    color: var(--warm-white);
+}
+
+/* ==========================================================================
+   HERO EXPERIENCE WITH DEPTH LAYERS (Sections 04, 05, 13–15)
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    min-height: 720px;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--space-7) var(--space-5) var(--space-5);
+    overflow: hidden;
+}
+
+/* Background oversized typography layer (Section 04) */
+.hero-bg-typography-layer {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-serif);
+    font-size: clamp(9rem, 26vw, 30rem);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.04);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+    user-select: none;
+    will-change: transform;
+}
+
+/* Background image & cinematic camera (Section 05) */
+.hero-media-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.hero-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    transform: scale(1.05);
+    filter: brightness(0.92) contrast(1.1);
+    transition: transform 2.4s var(--ease-out-expo), filter 2.4s ease;
+    will-change: transform;
+}
+
+/* Chiaroscuro Gradients */
+.hero-scrim-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background: linear-gradient(to bottom, rgba(8, 8, 8, 0.8) 0%, rgba(8, 8, 8, 0) 100%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.hero-scrim-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    background: linear-gradient(to top, rgba(8, 8, 8, 0.94) 0%, rgba(8, 8, 8, 0) 100%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Hero Content Layer */
+.hero-content {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+.hero-meta-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: var(--space-4);
+}
+
+.hero-concept-notice {
+    font-family: var(--font-sans);
+    font-size: var(--type-nano);
+    letter-spacing: var(--tracking-cinematic);
+    text-transform: uppercase;
+    color: var(--beige);
+    border-left: 1px solid var(--gold-muted);
+    padding-left: var(--space-2);
+}
+
+.hero-season {
+    font-family: var(--font-sans);
+    font-size: var(--type-micro);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--warm-white);
+}
+
+.hero-main-title {
+    margin-top: auto;
+    margin-bottom: var(--space-5);
+}
+
+.hero-title-primary {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: var(--type-hero);
+    letter-spacing: var(--tracking-tight);
+    line-height: 0.9;
+    color: var(--warm-white);
+    text-transform: uppercase;
+}
+
+.hero-title-secondary {
+    display: block;
+    font-family: var(--font-serif-subtle);
+    font-size: clamp(2.2rem, 5.5vw, 5.2rem);
+    font-style: italic;
+    font-weight: 300;
+    color: var(--cream);
+    letter-spacing: var(--tracking-tight);
+    margin-top: 0.4rem;
+}
+
+.hero-actions-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--line-dark);
+}
+
+.hero-scroll-cue {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-family: var(--font-sans);
+    font-size: var(--type-nano);
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+.scroll-line-anim {
+    width: 36px;
+    height: 1px;
+    background-color: var(--grey);
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-line-anim::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--warm-white);
+    animation: scrollSlide 2.6s infinite var(--ease-out-power3);
+}
+
+@keyframes scrollSlide {
+    0% { left: -100%; }
+    50% { left: 0%; }
+    100% { left: 100%; }
+}

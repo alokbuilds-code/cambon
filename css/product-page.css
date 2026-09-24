@@ -1,0 +1,263 @@
+/* ==========================================================================
+   CHANEL — DIGITAL CONCEPT
+   Product Page & Gallery Experience (Sections 34–36)
+   ========================================================================== */
+
+.product-detail-page {
+    padding-top: calc(var(--space-8) + 40px);
+    padding-bottom: var(--space-9);
+    background-color: var(--black);
+    color: var(--warm-white);
+}
+
+.product-detail-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: start;
+}
+
+/* Gallery column */
+.product-gallery-container {
+    position: sticky;
+    top: calc(var(--space-6) + 40px);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.product-gallery-main {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    background-color: var(--soft-black);
+    overflow: hidden;
+}
+
+.product-gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s var(--ease-out-power3), transform 0.8s var(--ease-out-expo);
+}
+
+.product-gallery-main:hover img {
+    transform: scale(1.035);
+}
+
+.product-thumbnails-row {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.product-thumb-btn {
+    width: 72px;
+    height: 90px;
+    background-color: var(--soft-black);
+    border: 1px solid transparent;
+    overflow: hidden;
+    opacity: 0.5;
+    transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+
+.product-thumb-btn.is-active,
+.product-thumb-btn:hover {
+    opacity: 1;
+    border-color: var(--warm-white);
+}
+
+.product-thumb-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Information Column */
+.product-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding-top: var(--space-2);
+}
+
+.product-info-category {
+    font-size: var(--type-micro);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--beige);
+}
+
+.product-info-title {
+    font-size: clamp(2rem, 3.8vw, 3.2rem);
+    letter-spacing: var(--tracking-tight);
+    line-height: 1.05;
+}
+
+.product-info-price {
+    font-size: 1.15rem;
+    letter-spacing: var(--tracking-wide);
+    color: var(--cream);
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+}
+
+.product-info-price .demo-badge {
+    font-size: 9px;
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--grey);
+    border: 1px solid var(--line-dark);
+    padding: 2px 6px;
+}
+
+.product-info-desc {
+    font-size: var(--type-body);
+    line-height: 1.8;
+    color: var(--grey);
+    margin-top: var(--space-2);
+}
+
+/* Size Selector */
+.product-size-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+}
+
+.size-header-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--type-micro);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+}
+
+.size-options-grid {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.size-option-btn {
+    min-width: 48px;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid var(--line-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    letter-spacing: var(--tracking-wide);
+    color: var(--warm-white);
+    transition: all 0.25s ease;
+}
+
+.size-option-btn:hover {
+    border-color: var(--warm-white);
+}
+
+.size-option-btn.is-active {
+    background-color: var(--warm-white);
+    border-color: var(--warm-white);
+    color: var(--black);
+}
+
+/* Add to Cart Button */
+.product-actions-wrap {
+    margin-top: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.btn-add-to-cart {
+    width: 100%;
+    padding: 1.25rem;
+    background-color: var(--warm-white);
+    color: var(--black);
+    font-family: var(--font-sans);
+    font-size: var(--type-micro);
+    letter-spacing: var(--tracking-cinematic);
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.btn-add-to-cart:hover {
+    background-color: var(--white);
+    transform: translateY(-1px);
+}
+
+.btn-add-to-cart:active {
+    transform: translateY(0);
+}
+
+/* Accordions for Craft, Material, Delivery */
+.product-accordions-group {
+    margin-top: var(--space-6);
+    border-top: 1px solid var(--line-dark);
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--line-dark);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: var(--space-3) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-sans);
+    font-size: var(--type-micro);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--warm-white);
+    cursor: pointer;
+    text-align: left;
+}
+
+.accordion-icon {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.is-open .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--ease-out-power3), opacity 0.3s ease;
+    opacity: 0;
+}
+
+.accordion-item.is-open .accordion-body {
+    max-height: 300px;
+    opacity: 1;
+    padding-bottom: var(--space-3);
+}
+
+.accordion-body p {
+    font-size: var(--type-body-sm);
+    color: var(--grey);
+    line-height: 1.7;
+}
+
+/* Related Pieces Section */
+.related-pieces-section {
+    margin-top: var(--space-9);
+    border-top: 1px solid var(--line-dark);
+    padding-top: var(--space-7);
+}
+
+.related-pieces-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-5);
+}

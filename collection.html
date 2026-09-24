@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE DIGITAL LOOKBOOK — CHANEL Concept Collection</title>
+    <meta name="description" content="An editorial lookbook exploring silhouettes, negative space, and haute couture geometry. Unofficial creative presentation.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Architecture -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/collection.css">
+    <link rel="stylesheet" href="css/product-page.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Tactile Film Grain -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- Page Curtain Transition -->
+    <div class="page-curtain" aria-hidden="true">
+        <span class="curtain-logo">CHANEL</span>
+        <span class="curtain-sub">PARIS · DIGITAL CONCEPT</span>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" aria-hidden="true">
+        <span class="cursor-text"></span>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="site-header" role="banner">
+        <nav class="nav-container" aria-label="Primary Navigation">
+            <div class="nav-left">
+                <button type="button" class="menu-btn btn-magnetic" aria-label="Open Navigation Menu" data-cursor="OPEN">
+                    <span class="menu-icon-lines" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span>MENU</span>
+                </button>
+            </div>
+
+            <div class="nav-center">
+                <a href="index.html" class="brand-title" data-cursor="CHANEL">
+                    CHANEL <span class="concept-sub">— DIGITAL CONCEPT</span>
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <button type="button" class="nav-link nav-search-btn search-open-trigger btn-magnetic" aria-label="Search Collection" data-cursor="SEARCH">
+                    SEARCH
+                </button>
+                <button type="button" class="nav-link nav-cart-btn cart-open-trigger btn-magnetic" aria-label="Shopping Bag" data-cursor="BAG">
+                    BAG <span class="cart-count-badge">(0)</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Fullscreen Menu -->
+    <div class="editorial-menu-overlay" role="dialog" aria-modal="true" aria-label="Main Navigation Menu">
+        <div class="menu-preview-backdrop" aria-hidden="true"></div>
+        <div class="menu-overlay-header">
+            <span class="micro-label">PARIS DIGITAL CONCEPT</span>
+            <button type="button" class="menu-close-btn btn-magnetic" aria-label="Close Menu" data-cursor="CLOSE">CLOSE ✕</button>
+        </div>
+        <div class="menu-content-wrapper">
+            <ul class="menu-category-list">
+                <li class="menu-category-item" data-category="fashion"><a href="shop.html?cat=fashion" class="menu-category-link">FASHION</a></li>
+                <li class="menu-category-item" data-category="handbags"><a href="shop.html?cat=handbags" class="menu-category-link">HANDBAGS</a></li>
+                <li class="menu-category-item" data-category="shoes"><a href="shop.html?cat=shoes" class="menu-category-link">SHOES</a></li>
+                <li class="menu-category-item" data-category="jewelry"><a href="shop.html?cat=jewelry" class="menu-category-link">JEWELRY</a></li>
+                <li class="menu-category-item" data-category="watches"><a href="shop.html?cat=watches" class="menu-category-link">WATCHES</a></li>
+                <li class="menu-category-item" data-category="beauty"><a href="shop.html?cat=beauty" class="menu-category-link">BEAUTY</a></li>
+                <li class="menu-category-item" data-category="fragrance"><a href="shop.html?cat=fragrance" class="menu-category-link">FRAGRANCE</a></li>
+                <li class="menu-category-item" data-category="couture"><a href="collection.html" class="menu-category-link">COUTURE</a></li>
+                <li class="menu-category-item" data-category="house"><a href="about.html" class="menu-category-link">THE HOUSE</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer-backdrop" aria-hidden="true"></div>
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Bag">
+        <div class="cart-drawer-header">
+            <h3>SHOPPING BAG</h3>
+            <button type="button" class="cart-close-btn btn-magnetic" aria-label="Close Bag" data-cursor="CLOSE">CLOSE ✕</button>
+        </div>
+        <div class="cart-items-container"></div>
+        <div class="cart-drawer-footer">
+            <div class="cart-subtotal-row">
+                <span>Subtotal (Demo)</span>
+                <span class="cart-subtotal-val">€ 0</span>
+            </div>
+            <button type="button" class="cart-checkout-btn btn-magnetic" data-cursor="CHECKOUT">PROCEED TO CHECKOUT</button>
+            <p class="cart-drawer-disclaimer">UNOFFICIAL DIGITAL CONCEPT · NO COMMERCE</p>
+        </div>
+    </aside>
+
+    <!-- Search Modal -->
+    <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search Catalog">
+        <div class="search-modal-header">
+            <span class="micro-label">SEARCH EXHIBITION</span>
+            <button type="button" class="search-modal-close btn-magnetic" aria-label="Close Search" data-cursor="CLOSE">CLOSE ✕</button>
+        </div>
+        <div class="search-modal-body">
+            <div class="search-input-wrapper">
+                <input type="text" class="search-input" placeholder="What are you looking for?" aria-label="Search input">
+            </div>
+            <div class="search-results-wrapper">
+                <div class="search-results-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Lookbook Content -->
+    <main id="main-content">
+        <!-- Collection Hero Header -->
+        <section class="collection-hero">
+            <div class="container">
+                <div class="mono-tag" style="margin-bottom: 0.8rem;">AUTUMN / WINTER LOOKBOOK</div>
+                <h1>THE DIGITAL LOOKBOOK</h1>
+                <p>
+                    A visual symphony of architectural volume, negative space, and haute couture Parisian posture.
+                </p>
+            </div>
+        </section>
+
+        <!-- Chapter 01: L'Allure Architecturale -->
+        <section class="lookbook-chapter" aria-label="Chapter 01: L'Allure Architecturale">
+            <div class="container">
+                <div class="chapter-header">
+                    <span class="chapter-number">01</span>
+                    <h2 class="chapter-title">L’ALLURE ARCHITECTURALE</h2>
+                </div>
+
+                <!-- Fullscreen Bleed Spread -->
+                <div class="lookbook-bleed-spread" data-cursor="VIEW">
+                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1800&q=85" alt="Haute Couture Evening Silhouette" loading="lazy">
+                </div>
+
+                <!-- Asymmetric Editorial Pair -->
+                <div class="lookbook-pair-spread">
+                    <div class="lookbook-image-primary" data-cursor="EXPLORE">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85" alt="Monochrome Portrait Study" loading="lazy">
+                    </div>
+                    <div class="lookbook-editorial-text-wrap">
+                        <div class="mono-tag">SILHOUETTE I · RUE CAMBON</div>
+                        <h3>THE DRAPE OF NOIR</h3>
+                        <p>
+                            Form follows gesture. In this study of evening proportions, double georgette falls in a perpendicular plane from shoulder to floor, broken only by the flash of pale champagne palladium at the cuff.
+                        </p>
+                        <p class="font-editorial" style="color: var(--beige); font-size: 1.25rem;">
+                            “Simplicity does not mean emptiness. It means the elimination of all that does not matter.”
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <a href="product.html?id=fashion-01" class="btn-editorial btn-magnetic" data-cursor="VIEW">
+                                DISCOVER THE TAILLEUR →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 02: La Nuit Parisienne -->
+        <section class="lookbook-chapter" aria-label="Chapter 02: La Nuit Parisienne">
+            <div class="container">
+                <div class="chapter-header">
+                    <span class="chapter-number">02</span>
+                    <h2 class="chapter-title">LA NUIT PARISIENNE</h2>
+                </div>
+
+                <!-- Reversed Asymmetric Editorial Pair -->
+                <div class="lookbook-pair-spread reversed">
+                    <div class="lookbook-image-primary" data-cursor="EXPLORE">
+                        <img src="https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&w=1200&q=85" alt="Evening Shoes and Pearls" loading="lazy">
+                    </div>
+                    <div class="lookbook-editorial-text-wrap">
+                        <div class="mono-tag">STUDY II · EVENING ACCENTS</div>
+                        <h3>THE STEP INTO SHADOW</h3>
+                        <p>
+                            Black duchess satin framed by cultured freshwater pearl embroidery. Designed to catch light with every deliberate step along the cobblestones of the Place Vendôme.
+                        </p>
+                        <p class="font-editorial" style="color: var(--beige); font-size: 1.25rem;">
+                            A cadence of restraint and quiet magnetism.
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <a href="product.html?id=shoe-03" class="btn-editorial btn-magnetic" data-cursor="VIEW">
+                                VIEW EVENING SHOES →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fullscreen Bleed Spread -->
+                <div class="lookbook-bleed-spread" data-cursor="VIEW">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1800&q=85" alt="Parisian Nightfall Architecture" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 03: Les Matières Nobles -->
+        <section class="lookbook-chapter" aria-label="Chapter 03: Les Matières Nobles">
+            <div class="container">
+                <div class="chapter-header">
+                    <span class="chapter-number">03</span>
+                    <h2 class="chapter-title">LES MATIÈRES NOBLES</h2>
+                </div>
+
+                <div class="lookbook-vertical-spread">
+                    <div class="lookbook-editorial-text-wrap">
+                        <div class="mono-tag">MÉTIERS D'ART / 03</div>
+                        <h3>TACTILE RESONANCE</h3>
+                        <p>
+                            Tweed woven with metallic threads, aged lambskin buffed with botanical oils, and crystals cut with lapidary precision.
+                        </p>
+                        <div style="margin-top: 2rem;">
+                            <a href="shop.html" class="btn-pill btn-magnetic" data-cursor="CATALOG">
+                                <span>EXPLORE ALL 16 PIECES</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lookbook-vertical-media" data-cursor="DISCOVER">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1600&q=85" alt="Atelier Embroidery Craft" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Experience -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-film-closing-frame">
+            <span class="footer-film-tag">ÉPILOGUE PARISIEN</span>
+            <p class="footer-film-quote">
+                “In order to be irreplaceable, one must always be different.”
+            </p>
+        </div>
+
+        <div class="footer-nav-grid">
+            <div class="footer-brand-col">
+                <span class="footer-brand-title">CHANEL</span>
+                <p class="footer-tagline">
+                    An unofficial digital concept celebrating Parisian elegance, typography, and haute couture craftsmanship.
+                </p>
+                <span class="footer-concept-notice">UNOFFICIAL DIGITAL CONCEPT · NO AFFILIATION</span>
+                <div>
+                    <button type="button" class="footer-sound-control btn-magnetic" aria-label="Toggle Generative Ambient Sound" data-cursor="AUDIO">
+                        <span class="sound-icon-bars" aria-hidden="true">
+                            <span class="sound-bar"></span>
+                            <span class="sound-bar"></span>
+                            <span class="sound-bar"></span>
+                        </span>
+                        <span class="sound-toggle-label">SOUND OFF</span>
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-col-title">CLIENT SERVICES</h4>
+                <ul class="footer-link-list">
+                    <li><a href="shop.html">Exhibition Catalog</a></li>
+                    <li><a href="about.html">Atelier Appointments</a></li>
+                    <li><a href="collection.html">Lookbook Preview</a></li>
+                    <li><a href="about.html">Delivery & Returns</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-col-title">THE HOUSE</h4>
+                <ul class="footer-link-list">
+                    <li><a href="about.html">The Rue Cambon Story</a></li>
+                    <li><a href="about.html">Métiers d’Art</a></li>
+                    <li><a href="collection.html">Digital Concept</a></li>
+                    <li><a href="about.html">Preservation</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-col-title">FOLLOW</h4>
+                <ul class="footer-link-list">
+                    <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+                    <li><a href="#" target="_blank" rel="noopener">Vimeo Editorial</a></li>
+                    <li><a href="#" target="_blank" rel="noopener">Archive Notes</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-massive-typography" aria-hidden="true">
+            <span class="footer-massive-text">CHANEL</span>
+            <span class="footer-massive-text" style="font-size: clamp(3.5rem, 11vw, 13rem); letter-spacing: var(--tracking-cinematic);">PARIS</span>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <span>© 2026 DIGITAL CONCEPT DEMO</span>
+            <span>UNOFFICIAL DIGITAL CONCEPT</span>
+            <span>PARIS · HAUTE COUTURE</span>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

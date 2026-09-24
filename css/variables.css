@@ -1,0 +1,89 @@
+/* ==========================================================================
+   CHANEL — DIGITAL CONCEPT
+   Design Tokens & CSS Variables (World-Class Visual Upgrade)
+   ========================================================================== */
+
+:root {
+    /* Palette from Section 04 */
+    --black: #080808;
+    --soft-black: #111111;
+    --deep-obsidian: #040404;
+    --white: #ffffff;
+    --warm-white: #f7f5f0;
+    --cream: #ebe7de;
+    --soft-beige: #d8d0c3;
+    --beige: #c8c0b3;
+    --charcoal: #222222;
+    --charcoal-light: #2a2a2a;
+    --grey: #827e77;
+    --grey-dark: #3a3835;
+    --gold-muted: #ad9b72;
+    --gold-pale: #c9b994;
+    --line-dark: rgba(255, 255, 255, 0.12);
+    --line-dark-subtle: rgba(255, 255, 255, 0.06);
+    --line-light: rgba(0, 0, 0, 0.12);
+    --line-light-subtle: rgba(0, 0, 0, 0.05);
+
+    /* Spacing System from Section 06 */
+    --space-1: 0.5rem;   /* 8px */
+    --space-2: 1rem;     /* 16px */
+    --space-3: 1.5rem;   /* 24px */
+    --space-4: 2rem;     /* 32px */
+    --space-5: 3rem;     /* 48px */
+    --space-6: 4rem;     /* 64px */
+    --space-7: 6rem;     /* 96px */
+    --space-8: 8rem;     /* 128px */
+    --space-9: 13rem;    /* 208px */
+
+    /* Typography Families from Section 05 */
+    --font-serif: 'Bodoni Moda', 'Cormorant Garamond', Georgia, serif;
+    --font-serif-subtle: 'Cormorant Garamond', 'Bodoni Moda', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+
+    /* Typographic Hierarchy Clamps with Extreme Scale Contrast (Section 10) */
+    --type-display-giant: clamp(6.5rem, 18vw, 22rem);
+    --type-hero: clamp(5.2rem, 13vw, 14.5rem);
+    --type-section: clamp(3.6rem, 8.5vw, 8.8rem);
+    --type-subsection: clamp(2.4rem, 5vw, 5rem);
+    --type-product: clamp(1.8rem, 3.2vw, 3.6rem);
+    --type-editorial: clamp(1.3rem, 2.2vw, 2.2rem);
+    --type-body-lg: 18px;
+    --type-body: 15px;
+    --type-body-sm: 13px;
+    --type-micro: 11px;
+    --type-nano: 9.5px;
+
+    /* Letter Spacing */
+    --tracking-tighter: -0.05em;
+    --tracking-tight: -0.025em;
+    --tracking-normal: 0em;
+    --tracking-wide: 0.08em;
+    --tracking-wider: 0.18em;
+    --tracking-widest: 0.28em;
+    --tracking-cinematic: 0.42em;
+
+    /* Transitions & Easings */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-power3: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --ease-out-power4: cubic-bezier(0.19, 1, 0.22, 1);
+    --ease-in-out-smooth: cubic-bezier(0.77, 0, 0.175, 1);
+    
+    --dur-micro: 250ms;
+    --dur-ui: 450ms;
+    --dur-reveal: 900ms;
+    --dur-cinematic: 1600ms;
+
+    /* Z-Index Hierarchy */
+    --z-background: 0;
+    --z-content: 10;
+    --z-midground: 20;
+    --z-foreground: 30;
+    --z-floating: 50;
+    --z-header: 100;
+    --z-drawer: 200;
+    --z-modal: 300;
+    --z-cursor: 500;
+    --z-intro: 900;
+    --z-curtain: 1000;
+    --z-grain: 9999;
+}

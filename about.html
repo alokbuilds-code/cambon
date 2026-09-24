@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE HOUSE — 31 RUE CAMBON | CHANEL Digital Concept</title>
+    <meta name="description" content="The architectural philosophy, atelier craftsmanship, and heritage of 31 Rue Cambon. Unofficial Parisian digital concept.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Architecture -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/collection.css">
+    <link rel="stylesheet" href="css/product-page.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .about-hero {
+            padding-top: calc(var(--space-8) + 40px);
+            padding-bottom: var(--space-8);
+            background-color: var(--black);
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: var(--type-section);
+            letter-spacing: var(--tracking-cinematic);
+            text-transform: uppercase;
+        }
+
+        .manifesto-lead {
+            font-family: var(--font-serif-subtle);
+            font-size: clamp(1.4rem, 2.8vw, 2.4rem);
+            font-style: italic;
+            color: var(--cream);
+            line-height: 1.45;
+            max-width: 880px;
+            margin: var(--space-4) auto var(--space-6);
+        }
+
+        .about-essay-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(3rem, 7vw, 8rem);
+            margin-bottom: var(--space-9);
+            align-items: center;
+        }
+
+        .about-essay-grid.reverse {
+            direction: rtl;
+        }
+
+        .about-essay-grid.reverse > * {
+            direction: ltr;
+        }
+
+        .about-media-box {
+            position: relative;
+            aspect-ratio: 4/5;
+            background-color: var(--soft-black);
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85);
+        }
+
+        .about-media-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(1.15);
+            transition: transform 1.4s var(--ease-out-expo);
+        }
+
+        .about-media-box:hover img {
+            transform: scale(1.04);
+        }
+
+        .about-essay-text {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+        }
+
+        .about-essay-text h2 {
+            font-size: clamp(2rem, 3.8vw, 3.4rem);
+            text-transform: uppercase;
+        }
+
+        .about-essay-text p {
+            font-size: var(--type-body);
+            color: var(--grey);
+            line-height: 1.8;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+            margin-top: var(--space-7);
+            border-top: 1px solid var(--line-dark);
+            padding-top: var(--space-7);
+        }
+
+        .pillar-card {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+
+        .pillar-num {
+            font-family: var(--font-serif);
+            font-size: 2.4rem;
+            color: var(--beige);
+            line-height: 1;
+        }
+
+        .pillar-title {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-normal);
+        }
+
+        .pillar-desc {
+            font-size: var(--type-body-sm);
+            color: var(--grey);
+            line-height: 1.7;
+        }
+
+        @media (max-width: 900px) {
+            .about-essay-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-5);
+            }
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tactile Film Grain -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- Page Curtain Transition -->
+    <div class="page-curtain" aria-hidden="true">
+        <span class="curtain-logo">CHANEL</span>
+        <span class="curtain-sub">PARIS · DIGITAL CONCEPT</span>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" aria-hidden="true">
+        <span class="cursor-text"></span>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="site-header" role="banner">
+        <nav class="nav-container" aria-label="Primary Navigation">
+            <div class="nav-left">
+                <button type="button" class="menu-btn btn-magnetic" aria-label="Open Navigation Menu" data-cursor="OPEN">
+                    <span class="menu-icon-lines" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span>MENU</span>
+                </button>
+            </div>
+
+            <div class="nav-center">
+                <a href="index.html" class="brand-title" data-cursor="CHANEL">
+                    CHANEL <span class="concept-sub">— DIGITAL CONCEPT</span>
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <button type="button" class="nav-link nav-search-btn search-open-trigger btn-magnetic" aria-label="Search Collection" data-cursor="SEARCH">
+                    SEARCH
+                </button>
+                <button type="button" class="nav-link nav-cart-btn cart-open-trigger btn-magnetic" aria-label="Shopping Bag" data-cursor="BAG">
+                    BAG <span class="cart-count-badge">(0)</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Fullscreen Menu -->
+    <div class="editorial-menu-overlay" role="dialog" aria-modal="true" aria-label="Main Navigation Menu">
+        <div class="menu-preview-backdrop" aria-hidden="true"></div>
+        <div class="menu-overlay-header">
+            <span class="micro-label">PARIS DIGITAL CONCEPT</span>
+            <button type="button" class="menu-close-btn btn-magnetic" aria-label="Close Menu" data-cursor="CLOSE">CLOSE ✕</button>
+        </div>
+        <div class="menu-content-wrapper">
+            <ul class="menu-category-list">
+                <li class="menu-category-item" data-category="fashion"><a href="shop.html?cat=fashion" class="menu-category-link">FASHION</a></li>
+                <li class="menu-category-item" data-category="handbags"><a href="shop.html?cat=handbags" class="menu-category-link">HANDBAGS</a></li>
+                <li class="menu-category-item" data-category="shoes"><a href="shop.html?cat=shoes" class="menu-category-link">SHOES</a></li>
+                <li class="menu-category-item" data-category="jewelry"><a href="shop.html?cat=jewelry" class="menu-category-link">JEWELRY</a></li>
+                <li class="menu-category-item" data-category="watches"><a href="shop.html?cat=watches" class="menu-category-link">WATCHES</a></li>
+                <li class="menu-category-item" data-category="beauty"><a href="shop.html?cat=beauty" class="menu-category-link">BEAUTY</a></li>
+                <li class="menu-category-item" data-category="fragrance"><a href="shop.html?cat=fragrance" class="menu-category-link">FRAGRANCE</a></li>
+                <li class="menu-category-item" data-category="couture"><a href="collection.html" class="menu-category-link">COUTURE</a></li>
+                <li class="menu-category-item" data-category="house"><a href="about.html" class="menu-category-link">THE HOUSE</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer-backdrop" aria-hidden="true"></div>
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Bag">
+        <div class="cart-drawer-header">
+            <h3>SHOPPING BAG</h3>
+            <button type="button" class="cart-close-btn btn-magnetic" aria-label="Close Bag" data-cursor="CLOSE">CLOSE ✕</button>
+        </div>
+        <div class="cart-items-container"></div>
+        <div class="cart-drawer-footer">
+            <div class="cart-subtotal-row">
+                <span>Subtotal (Demo)</span>
+                <span class="cart-subtotal-val">€ 0</span>
+            </div>
+            <button type="button" class="cart-checkout-btn btn-magnetic" data-cursor="CHECKOUT">PROCEED TO CHECKOUT</button>
+            <p class="cart-drawer-disclaimer">UNOFFICIAL DIGITAL CONCEPT · NO COMMERCE</p>
+        </div>
+    </aside>
+
+    <!-- Search Modal -->
+    <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search Catalog">
+        <div class="search-modal-header">
+            <span class="micro-label">SEARCH EXHIBITION</span>
+            <button type="button" class="search-modal-close btn-magnetic" aria-label="Close Search" data-cursor="CLOSE">CLOSE ✕</button>
+        </div>
+        <div class="search-modal-body">
+            <div class="search-input-wrapper">
+                <input type="text" class="search-input" placeholder="What are you looking for?" aria-label="Search input">
+            </div>
+            <div class="search-results-wrapper">
+                <div class="search-results-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main About Experience -->
+    <main id="main-content">
+        <section class="about-hero">
+            <div class="container">
+                <div class="mono-tag" style="margin-bottom: 0.8rem;">SANCTUARY OF STYLE / PARIS 1ER</div>
+                <h1>THE HOUSE</h1>
+                <p class="manifesto-lead">
+                    “Fashion fades, only style remains the same.” An unyielding commitment to Parisian discipline, geometric liberation, and timeless architecture.
+                </p>
+            </div>
+        </section>
+
+        <!-- Chapter 1: The Sanctuary at 31 Rue Cambon -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="about-essay-grid">
+                    <div class="about-essay-text">
+                        <div class="mono-tag">HERITAGE · 31 RUE CAMBON</div>
+                        <h2>THE MIRRORED STAIRCASE</h2>
+                        <p>
+                            In 1918, Gabrielle Chanel acquired the townhouse at 31 Rue Cambon, establishing a radical epicenter where the boutique, the haute couture salons, the private apartment, and the creative ateliers coalesced under one roof.
+                        </p>
+                        <p>
+                            From the legendary mirrored art deco staircase, Mademoiselle sat invisibly on the fifth step, observing the reactions of society as models descended. Every surface reflected light at deliberate angles—a visual geometry that inspired the faceted flacon of N°5 and the octagonal architecture of the Place Vendôme watch cases.
+                        </p>
+                    </div>
+                    <div class="about-media-box" data-cursor="PARIS">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=85" alt="Architectural Parisian Staircase" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Chapter 2: The Discipline of Black & White -->
+                <div class="about-essay-grid reverse">
+                    <div class="about-essay-text">
+                        <div class="mono-tag">AESTHETIC PHILOSOPHY</div>
+                        <h2>MONOCHROME PURITY</h2>
+                        <p>
+                            Before Chanel, black was reserved solely for mourning and uniform workwear. By elevating noir to the supreme expression of feminine sovereignty, she stripped away decorative ornament in favor of architectural silhouette.
+                        </p>
+                        <p>
+                            White illuminated the face through pearls and camellias; beige evoked the sunlit sand of the French coast; black anchored the gaze with uncompromising authority.
+                        </p>
+                    </div>
+                    <div class="about-media-box" data-cursor="VIEW">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1400&q=85" alt="Monochrome Model Silhouette" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- 3 Pillars of Craftsmanship -->
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <span class="pillar-num">01</span>
+                        <h3 class="pillar-title">FREEDOM OF MOVEMENT</h3>
+                        <p class="pillar-desc">
+                            Jackets constructed without stiff interlinings, sleeves cut high at the armhole, and skirt hemlines weighted with subtle chains so the garment moves fluidly with the human body.
+                        </p>
+                    </div>
+                    <div class="pillar-card">
+                        <span class="pillar-num">02</span>
+                        <h3 class="pillar-title">MÉTIERS D'ART</h3>
+                        <p class="pillar-desc">
+                            Preserving the rare historic crafts of Parisian embroidery, feathered plume work, goldsmithing, and shoe making through generational master workshops.
+                        </p>
+                    </div>
+                    <div class="pillar-card">
+                        <span class="pillar-num">03</span>
+                        <h3 class="pillar-title">TIMELESS GEOMETRY</h3>
+                        <p class="pillar-desc">
+                            Diamond quilting, the square flacon, the octagonal bezel—pure forms that exist outside seasonal trends and resist temporal decay.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Experience -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-film-closing-frame">
+            <span class="footer-film-tag">ÉPILOGUE PARISIEN</span>
+            <p class="footer-film-quote">
+                “In order to be irreplaceable, one must always be different.”
+            </p>
+        </div>
+
+        <div class="footer-nav-grid">
+            <div class="footer-brand-col">
+                <span class="footer-brand-title">CHANEL</span>
+                <p class="footer-tagline">
+                    An unofficial digital concept celebrating Parisian elegance, typography, and haute couture craftsmanship.
+                </p>
+                <span class="footer-concept-notice">UNOFFICIAL DIGITAL CONCEPT · NO AFFILIATION</span>
+                <div>
+                    <button type="button" class="footer-sound-control btn-magnetic" aria-label="Toggle Generative Ambient Sound" data-cursor="AUDIO">
+                        <span class="sound-icon-bars" aria-hidden="true">
+                            <span class="sound-bar"></span>
+                            <span class="sound-bar"></span>
+                            <span class="sound-bar"></span>
+                        </span>
+                        <span class="sound-toggle-label">SOUND OFF</span>
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-col-title">CLIENT SERVICES</h4>
+                <ul class="footer-link-list">
+                    <li><a href="shop.html">Exhibition Catalog</a></li>
+                    <li><a href="about.html">Atelier Appointments</a></li>
+                    <li><a href="collection.html">Lookbook Preview</a></li>
+                    <li><a href="about.html">Delivery & Returns</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-col-title">THE HOUSE</h4>
+                <ul class="footer-link-list">
+                    <li><a href="about.html">The Rue Cambon Story</a></li>
+                    <li><a href="about.html">Métiers d’Art</a></li>
+                    <li><a href="collection.html">Digital Concept</a></li>
+                    <li><a href="about.html">Preservation</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-col-title">FOLLOW</h4>
+                <ul class="footer-link-list">
+                    <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+                    <li><a href="#" target="_blank" rel="noopener">Vimeo Editorial</a></li>
+                    <li><a href="#" target="_blank" rel="noopener">Archive Notes</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-massive-typography" aria-hidden="true">
+            <span class="footer-massive-text">CHANEL</span>
+            <span class="footer-massive-text" style="font-size: clamp(3.5rem, 11vw, 13rem); letter-spacing: var(--tracking-cinematic);">PARIS</span>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <span>© 2026 DIGITAL CONCEPT DEMO</span>
+            <span>UNOFFICIAL DIGITAL CONCEPT</span>
+            <span>PARIS · HAUTE COUTURE</span>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

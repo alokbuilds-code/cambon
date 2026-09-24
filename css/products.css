@@ -1,0 +1,739 @@
+/* ==========================================================================
+   CHANEL — DIGITAL CONCEPT
+   Art Direction Upgrades: Morphing Scroll, Moving Image Strip,
+   Silence Section & Fullscreen Typography
+   (Sections 08, 09, 11, 12, 16, 20, 24, 26)
+   ========================================================================== */
+
+/* ==========================================================================
+   SECTION 20: EDITORIAL SPREAD WITH OVERLAPPING DEPTH (12-COL GRID)
+   ========================================================================== */
+.editorial-spread-section {
+    position: relative;
+    padding: var(--space-9) 0;
+    background-color: var(--black);
+    color: var(--warm-white);
+    overflow: hidden;
+}
+
+/* Layered background text behind editorial spread (Section 04 & 12) */
+.editorial-bg-ghost-text {
+    position: absolute;
+    top: 18%;
+    right: -2%;
+    font-family: var(--font-serif);
+    font-size: clamp(8rem, 24vw, 28rem);
+    line-height: 0.8;
+    color: rgba(255, 255, 255, 0.028);
+    text-transform: uppercase;
+    pointer-events: none;
+    z-index: 1;
+    user-select: none;
+}
+
+.editorial-layout-12 {
+    position: relative;
+    z-index: 2;
+    align-items: center;
+}
+
+.editorial-lead-col {
+    grid-column: 1 / 7;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding-right: clamp(1rem, 3vw, 4rem);
+}
+
+.editorial-spread-title {
+    font-family: var(--font-serif);
+    font-size: var(--type-section);
+    line-height: 0.94;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-tight);
+}
+
+.editorial-spread-title span {
+    display: block;
+}
+
+.editorial-lead-para {
+    font-family: var(--font-serif-subtle);
+    font-size: var(--type-editorial);
+    line-height: 1.45;
+    color: var(--cream);
+    max-width: 580px;
+    margin-top: var(--space-2);
+}
+
+.editorial-body-para {
+    font-size: var(--type-body);
+    line-height: 1.8;
+    color: var(--grey);
+    max-width: 500px;
+}
+
+.editorial-media-col {
+    grid-column: 7 / 13;
+    position: relative;
+}
+
+.editorial-media-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background-color: var(--soft-black);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+}
+
+.editorial-media-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.15) brightness(0.92);
+    transition: transform 1.4s var(--ease-out-expo), filter 0.8s ease;
+    will-change: transform;
+}
+
+.editorial-media-frame:hover img {
+    transform: scale(1.04);
+    filter: grayscale(100%) contrast(1.22) brightness(0.98);
+}
+
+.editorial-caption-floating {
+    margin-top: var(--space-3);
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--type-nano);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+/* ==========================================================================
+   SECTION 24: CONTINUOUS MOVING CINEMATIC IMAGE STRIP
+   ========================================================================== */
+.moving-strip-section {
+    position: relative;
+    padding: var(--space-7) 0;
+    background-color: var(--deep-obsidian);
+    overflow: hidden;
+    border-top: 1px solid var(--line-dark);
+    border-bottom: 1px solid var(--line-dark);
+}
+
+.strip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1680px;
+    margin: 0 auto var(--space-5);
+    padding: 0 var(--space-5);
+}
+
+.marquee-track-wrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+}
+
+.marquee-track {
+    display: flex;
+    gap: var(--space-4);
+    animation: marqueeScroll 45s linear infinite;
+    will-change: transform;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.marquee-item {
+    flex-shrink: 0;
+    width: clamp(260px, 24vw, 380px);
+    aspect-ratio: 4/5;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--soft-black);
+}
+
+.marquee-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.15) brightness(0.9);
+    transition: transform 1.2s var(--ease-out-power3), filter 0.6s ease;
+}
+
+.marquee-item:hover img {
+    transform: scale(1.06);
+    filter: grayscale(0%) contrast(1.1);
+}
+
+.marquee-caption {
+    position: absolute;
+    bottom: var(--space-3);
+    left: var(--space-3);
+    font-size: var(--type-nano);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--warm-white);
+    background: rgba(8, 8, 8, 0.75);
+    padding: 4px 10px;
+    backdrop-filter: blur(4px);
+}
+
+/* ==========================================================================
+   SECTIONS 08 & 26: SCROLL-BASED PHYSICAL COMPOSITION TRANSFORMATION
+   (Small Box -> Medium Editorial -> Fullscreen Architecture -> Object Reveal)
+   ========================================================================== */
+.scroll-transformation-section {
+    position: relative;
+    width: 100%;
+    height: 280vh; /* Scroller runway */
+    background-color: var(--black);
+}
+
+.transformation-sticky-viewport {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transformation-canvas-box {
+    position: relative;
+    width: 48vw;
+    height: 60vh;
+    overflow: hidden;
+    background-color: var(--soft-black);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.9);
+    will-change: width, height, transform;
+}
+
+.transformation-canvas-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.2);
+    will-change: transform, filter;
+}
+
+.transformation-floating-text {
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    color: var(--warm-white);
+    pointer-events: none;
+    padding: 0 var(--space-4);
+}
+
+.transformation-title {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 8vw, 8rem);
+    letter-spacing: var(--tracking-tight);
+    text-transform: uppercase;
+    line-height: 0.95;
+}
+
+.transformation-sub {
+    font-family: var(--font-sans);
+    font-size: var(--type-nano);
+    letter-spacing: var(--tracking-cinematic);
+    text-transform: uppercase;
+    color: var(--beige);
+    margin-top: var(--space-3);
+}
+
+/* ==========================================================================
+   SECTION 09: FULLSCREEN PURE TYPOGRAPHY MOMENT
+   ========================================================================== */
+.fullscreen-typography-moment {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    min-height: 700px;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.pure-typo-primary {
+    font-family: var(--font-serif);
+    font-size: clamp(5rem, 16vw, 19rem);
+    letter-spacing: var(--tracking-tight);
+    line-height: 0.85;
+    color: var(--warm-white);
+    text-transform: uppercase;
+    will-change: transform, opacity;
+}
+
+.pure-typo-secondary {
+    font-family: var(--font-serif-subtle);
+    font-size: clamp(3rem, 10vw, 11rem);
+    font-style: italic;
+    font-weight: 300;
+    color: var(--cream);
+    letter-spacing: var(--tracking-tight);
+    line-height: 0.9;
+    margin-top: var(--space-2);
+}
+
+.pure-typo-caption {
+    font-family: var(--font-sans);
+    font-size: var(--type-nano);
+    letter-spacing: var(--tracking-cinematic);
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-top: var(--space-6);
+}
+
+/* ==========================================================================
+   SECTION 20: SILENCE SECTION (LE SILENCE DE RUE CAMBON)
+   ========================================================================== */
+.section-silence {
+    padding: var(--space-9) 0;
+    background-color: var(--cream);
+    color: var(--black);
+    position: relative;
+    overflow: hidden;
+}
+
+.silence-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(3rem, 7vw, 8rem);
+    align-items: center;
+}
+
+.silence-quote {
+    font-family: var(--font-serif);
+    font-size: clamp(2.4rem, 4.5vw, 4.5rem);
+    line-height: 1.08;
+    letter-spacing: var(--tracking-tight);
+}
+
+.silence-text-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.silence-body {
+    font-size: var(--type-body);
+    line-height: 1.85;
+    color: #4a4742;
+    max-width: 520px;
+}
+
+.silence-image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    background-color: #dcd7ce;
+    overflow: hidden;
+}
+
+.silence-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.1);
+    transition: transform 1.6s var(--ease-out-expo);
+}
+
+.silence-image-wrap:hover img {
+    transform: scale(1.03);
+}
+
+/* ==========================================================================
+   SECTION 22 & 23: OBJECTS OF DESIRE WITH DUAL-IMAGE CROSSFADE
+   ========================================================================== */
+.objects-exhibition-section {
+    padding: var(--space-9) 0;
+    background-color: var(--black);
+    color: var(--warm-white);
+}
+
+.section-editorial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: var(--space-7);
+    border-bottom: 1px solid var(--line-dark);
+    padding-bottom: var(--space-4);
+}
+
+.section-editorial-header h2 {
+    font-size: var(--type-section);
+    text-transform: uppercase;
+}
+
+.asymmetric-product-flow {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-9);
+}
+
+/* Major Featured Single Product */
+.product-focus-large {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: var(--space-7);
+    align-items: center;
+}
+
+.product-focus-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/10;
+    background-color: var(--soft-black);
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85);
+}
+
+.product-focus-details {
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.product-focus-title {
+    font-family: var(--font-serif);
+    font-size: var(--type-product);
+    letter-spacing: var(--tracking-tight);
+}
+
+.product-focus-desc {
+    font-size: var(--type-body);
+    color: var(--grey);
+    line-height: 1.75;
+    max-width: 440px;
+}
+
+.product-price-demo {
+    font-size: var(--type-body-sm);
+    letter-spacing: var(--tracking-wide);
+    color: var(--beige);
+}
+
+/* Asymmetric Duet with Dual-Image Hover */
+.product-duet-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: var(--space-8);
+    align-items: flex-start;
+}
+
+.product-card-editorial {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.product-card-editorial.offset-down {
+    margin-top: var(--space-7);
+}
+
+.product-card-image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    background-color: var(--soft-black);
+    overflow: hidden;
+}
+
+.product-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 4px;
+}
+
+.product-card-title {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    letter-spacing: var(--tracking-tight);
+}
+
+.product-card-category {
+    font-size: var(--type-nano);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--beige);
+}
+
+/* ==========================================================================
+   SECTIONS 25 & 26: PINNED HORIZONTAL FOOTWEAR RUNWAY
+   ========================================================================== */
+.horizontal-scroll-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--deep-obsidian);
+}
+
+.horizontal-sticky-viewport {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.horizontal-bg-typography {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-family: var(--font-serif);
+    font-size: clamp(8rem, 25vw, 28rem);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.032);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+    user-select: none;
+}
+
+.horizontal-track {
+    display: flex;
+    align-items: center;
+    gap: clamp(3rem, 6vw, 7rem);
+    padding-left: clamp(3rem, 9vw, 12rem);
+    padding-right: clamp(5rem, 14vw, 20rem);
+    position: relative;
+    z-index: 2;
+    will-change: transform;
+}
+
+.horizontal-intro-card {
+    min-width: clamp(280px, 32vw, 440px);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.horizontal-intro-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.6rem, 5.2vw, 5rem);
+    line-height: 0.94;
+    text-transform: uppercase;
+}
+
+.horizontal-card {
+    min-width: clamp(280px, 32vw, 420px);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    flex-shrink: 0;
+}
+
+.horizontal-card-media {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background-color: var(--black);
+    overflow: hidden;
+    position: relative;
+}
+
+.horizontal-card-caption {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--type-nano);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--beige);
+}
+
+/* ==========================================================================
+   SECTIONS 27 & 28: FRAGRANCE CHIAROSCURO
+   ========================================================================== */
+.fragrance-spotlight-section {
+    padding: var(--space-9) 0;
+    background: radial-gradient(circle at 65% 50%, #171717 0%, #050505 75%);
+    position: relative;
+    overflow: hidden;
+}
+
+.fragrance-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: clamp(3rem, 8vw, 8rem);
+    align-items: center;
+}
+
+.fragrance-media-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    background-color: #030303;
+    overflow: hidden;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.95);
+}
+
+.fragrance-media-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(1.18) brightness(0.92);
+    transition: transform 1.8s var(--ease-out-expo), filter 1.2s ease;
+}
+
+.fragrance-media-wrap:hover img {
+    transform: scale(1.045);
+    filter: contrast(1.24) brightness(1.0);
+}
+
+.fragrance-glow-accent {
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(173, 155, 114, 0.14) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.fragrance-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.fragrance-notes-list {
+    display: flex;
+    gap: var(--space-4);
+    padding: var(--space-3) 0;
+    border-top: 1px solid var(--line-dark);
+    border-bottom: 1px solid var(--line-dark);
+}
+
+.fragrance-note-item {
+    font-size: var(--type-nano);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--beige);
+}
+
+/* ==========================================================================
+   SECTIONS 32 & 33: THREE.JS MASTER MOMENT
+   ========================================================================== */
+.threejs-sculpture-section {
+    position: relative;
+    width: 100%;
+    min-height: 85vh;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: var(--space-7) 0;
+}
+
+#three-canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.sculpture-overlay-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    pointer-events: none;
+    max-width: 680px;
+    padding: 0 var(--space-4);
+}
+
+.sculpture-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 5.5vw, 4.4rem);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--warm-white);
+}
+
+.sculpture-caption {
+    font-family: var(--font-sans);
+    font-size: var(--type-nano);
+    letter-spacing: var(--tracking-cinematic);
+    text-transform: uppercase;
+    color: var(--beige);
+    margin-top: var(--space-2);
+}
+
+/* ==========================================================================
+   SECTION 31: PARIS SEQUENCE (RUE CAMBON)
+   ========================================================================== */
+.paris-sequence-section {
+    position: relative;
+    padding: var(--space-9) 0;
+    background-color: var(--black);
+}
+
+.paris-sequence-banner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 21/9;
+    min-height: 520px;
+    overflow: hidden;
+    background-color: var(--soft-black);
+}
+
+.paris-sequence-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.15) brightness(0.85);
+    transition: transform 2.2s var(--ease-out-expo);
+}
+
+.paris-sequence-banner:hover img {
+    transform: scale(1.035);
+}
+
+.paris-sequence-caption {
+    position: absolute;
+    bottom: var(--space-6);
+    left: var(--space-6);
+    z-index: 2;
+}
+
+.paris-sequence-caption h3 {
+    font-size: clamp(2.6rem, 5.5vw, 4.6rem);
+    text-transform: uppercase;
+}
+
+.paris-sequence-caption p {
+    font-size: var(--type-nano);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--beige);
+    margin-top: var(--space-1);
+}
