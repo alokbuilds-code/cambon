@@ -128,27 +128,8 @@ cambon/
 
 ---
 
-## Getting Started
 
-No build step or Node environment is required. You can run the project in any of the following ways:
 
-### Option 1: Direct File Launch
-Double-click `index.html` or open it with any modern browser (Chrome, Edge, Firefox, Safari).
-
-### Option 2: Local Static Server
-Using Python:
-```bash
-python -m http.server 8080
-```
-Using Node:
-```bash
-npx serve .
-```
-Or using the **VS Code Live Server** extension.
-
-Then open: `http://localhost:8080`
-
----
 
 ## Design System Tokens
 
